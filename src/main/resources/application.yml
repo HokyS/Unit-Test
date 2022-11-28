@@ -1,0 +1,24 @@
+environment: prod
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/testdb
+    username:
+    password:
+  jpa:
+    database: mysql
+    hibernate:
+      ddl-auto: create
+
+---
+environment: test
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: testdb
+    password:
+  jpa:
+    database: h2
+  h2:
+    console:
+      enabled: true
+
